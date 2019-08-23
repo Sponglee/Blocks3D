@@ -455,7 +455,9 @@ public class GameManager : Singleton<GameManager>
 
         slider = wheel.transform.GetChild(6).GetChild(0).GetComponent<Image>();
 
-        nextScore = ui.transform.GetChild(1).gameObject.GetComponent<Text>();
+        nextScore = wheel.transform.GetChild(3).GetChild(0).gameObject.GetComponent<Text>();
+
+
         scoreText = ui.transform.GetChild(2).gameObject.GetComponent<Text>();
         highScoreText = ui.transform.GetChild(4).gameObject.GetComponent<Text>();
 
@@ -1577,8 +1579,15 @@ public class GameManager : Singleton<GameManager>
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;
 
-        Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos);
+        //formaincam1
+        //Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x, -4f - Camera.main.transform.position.y, 0);
+
+        //formaincam3
+        Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x, -4f - Camera.main.transform.position.y/2f, 0);
+
         Vector3 direction = screenPos - wheel.transform.position;
+
+        Debug.DrawLine(screenPos, wheel.transform.position, Color.green);
 
         return Mathf.Atan2(Vector3.Dot(Vector3.back, Vector3.Cross(wheel.transform.up, direction)), Vector3.Dot(wheel.transform.up, direction)) * Mathf.Rad2Deg;
     }
@@ -2782,7 +2791,7 @@ public class GameManager : Singleton<GameManager>
                     {
 
                         tmprowObj.GetComponent<Square>().SquareTmpSquare = tmpTmpSquare.transform;
-                        tmprowObj.GetComponent<Collider2D>().isTrigger = true;
+                        tmprowObj.GetComponent<BoxCollider>().isTrigger = true;
 
                         FurtherProgress = true;
                         //furtherScore = tmprowObj.GetComponent<Square>().Score;
@@ -2791,7 +2800,7 @@ public class GameManager : Singleton<GameManager>
                             StartCoroutine(FurtherPops(tmprowObj));
 
                         //Detach this square from parent
-                        tmprowObj.transform.parent = tmprowObj.transform.parent.parent.parent.GetChild(3);
+                        tmprowObj.transform.parent = null;
                     }
                 }
 
