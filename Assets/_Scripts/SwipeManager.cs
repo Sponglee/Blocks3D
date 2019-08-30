@@ -52,7 +52,7 @@ public class SwipeManager : Singleton<SwipeManager>
             touchPosition = Input.mousePosition;
             screenTouch = Camera.main.ScreenToViewportPoint(touchPosition);
             
-            Debug.Log("TARGET " + screenTouch.x + " " + screenTouch.y + " " + screenTouch.z);
+            //Debug.Log("TARGET " + screenTouch.x + " " + screenTouch.y + " " + screenTouch.z);
         }
         else if(Input.GetMouseButton(0))
         {
@@ -88,7 +88,7 @@ public class SwipeManager : Singleton<SwipeManager>
 
                 Direction |= SwipeDirection.None;
             }
-            Debug.Log(Direction);
+            //Debug.Log(Direction);
         }
 
     }

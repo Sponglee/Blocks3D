@@ -627,7 +627,7 @@ public class Square : MonoBehaviour
     // DOUBT IF NEEDED SEE FIXED UPDATE
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.tag + " ( " + score + ")");
+
         //Power up collisions
         #region Powerup interaction
 
@@ -666,7 +666,7 @@ public class Square : MonoBehaviour
 
         if (other.gameObject.CompareTag("spot") && this.gameObject.CompareTag("square"))
         {
-            Debug.Log(gameObject.transform.parent.name + "( " + score + ")");
+            Debug.Log(gameObject.transform.parent.name + "( " + gameObject.name + ") : " + score);
             //reset speed back
             this.speed = 10f;
 
@@ -703,7 +703,8 @@ public class Square : MonoBehaviour
         //other square
         if (other.gameObject.CompareTag("square") && gameObject.CompareTag("square") && !this.touched /*&& gameObject.transform.GetSiblingIndex() > other.gameObject.transform.GetSiblingIndex()*/)
         {
-            Debug.Log("REEE");
+            Debug.Log(transform.parent.name + " (" + gameObject.name + ")" + " >>>> COLLIDED " + other.transform.parent.name + " ( " + other.gameObject.name + ") : " + score);
+            //Debug.Log("REEE");
             //make sure checks only one of 2 collisions (one that is not touched
             other.gameObject.GetComponent<Square>().touched = true;
 

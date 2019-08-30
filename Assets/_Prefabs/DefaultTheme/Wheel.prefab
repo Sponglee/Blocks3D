@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 0}
+  m_AnchoredPosition: {x: -0.2, y: -0.01}
   m_SizeDelta: {x: 16.951, y: 17.121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222963906656097150
@@ -586,7 +586,7 @@ Transform:
   m_GameObject: {fileID: 1814978076386588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.85}
-  m_LocalScale: {x: 3.4086475, y: 3.408647, z: 3.408647}
+  m_LocalScale: {x: 2.8671496, y: 2.8671494, z: 2.8671494}
   m_Children:
   - {fileID: 4561869679484948}
   m_Father: {fileID: 4045136334621142}
@@ -683,7 +683,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.76
+  m_Radius: 1.5
   m_Height: 11.94
   m_Direction: 2
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -759,8 +759,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319951724925115180}
   m_LocalRotation: {x: 0.57725435, y: -0.408384, z: 0.40838727, w: -0.577252}
-  m_LocalPosition: {x: -0, y: -0, z: 0.022}
-  m_LocalScale: {x: 0.73345476, y: 0.17175055, z: 0.7334553}
+  m_LocalPosition: {x: -0.0000000037604, y: -0.00000001265, z: 0.022}
+  m_LocalScale: {x: 0.6338076, y: 0.14841652, z: 0.633808}
   m_Children: []
   m_Father: {fileID: 4215266403881374}
   m_RootOrder: 0
@@ -840,7 +840,7 @@ RectTransform:
   m_GameObject: {fileID: 4289808963100199969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.83}
-  m_LocalScale: {x: 0.016362408, y: 0.016362408, z: 0.016362408}
+  m_LocalScale: {x: 0.013474443, y: 0.013474443, z: 0.013474443}
   m_Children: []
   m_Father: {fileID: 5610290615856376684}
   m_RootOrder: 0
@@ -1010,7 +1010,7 @@ BoxCollider:
   m_GameObject: {fileID: 4570224513905237997}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2.0000007, z: 1.0000005}
   m_Center: {x: 0.000000059604645, y: -1.0164395e-20, z: -0.00000008940699}

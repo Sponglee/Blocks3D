@@ -1576,14 +1576,22 @@ public class GameManager : Singleton<GameManager>
     // Get angle for mousePosition
     private float GetFirstClickAngle()
     {
+    
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;
 
         //formaincam1
         //Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x, -4f - Camera.main.transform.position.y, 0);
 
-        //formaincam3
-        Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x, -4f - Camera.main.transform.position.y/2f, 0);
+        //formaincam2
+        Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x + 2f, -3f - Camera.main.transform.position.y / 2f, 0);
+
+
+        ////formaincam3
+        //Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x, -4f - Camera.main.transform.position.y/2f, 0);
+
+        ////formaincam4
+        //Vector3 screenPos = Camera.main.ScreenToWorldPoint(mousePos) + new Vector3(-Camera.main.transform.position.x + 2f, -4f - Camera.main.transform.position.y / 2f, 0);
 
         Vector3 direction = screenPos - wheel.transform.position;
 
