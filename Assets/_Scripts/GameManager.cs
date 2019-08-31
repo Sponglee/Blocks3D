@@ -2062,7 +2062,7 @@ public class GameManager : Singleton<GameManager>
                 }
 
                 //if not moving
-                if (first != null && !first.transform.parent.CompareTag("outer"))
+                if (first != null && first.transform.parent != null && !first.transform.parent.CompareTag("outer"))
                     textObj.transform.SetParent(wheel.transform.GetChild(1).GetChild(int.Parse(first.transform.parent.name)));
 
                 // flt text text
@@ -2201,7 +2201,7 @@ public class GameManager : Singleton<GameManager>
             target.tag = "Untagged";
             target.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             target.GetComponent<Rigidbody>().useGravity = true;
-            target.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-200f,200f), 100f, -500f));
+            target.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-150f,150f), 100f, -400f));
             target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, 100f, 10f));
 
         }
@@ -2902,7 +2902,7 @@ public class GameManager : Singleton<GameManager>
 
 
 
-            if (tmpSquare != null && !tmpSquare.transform.parent.CompareTag("outer"))
+            if (tmpSquare != null && tmpSquare.transform.parent != null && !tmpSquare.transform.parent.CompareTag("outer"))
                 CheckAbove(int.Parse(furthertmpSquare.transform.parent.name), furthertmpSquare.transform.GetSiblingIndex());
 
             //if (tmpSquare.GetComponent<Collider2D>().isTrigger != true)
@@ -3410,7 +3410,10 @@ public class GameManager : Singleton<GameManager>
         {
             if (spot.transform.childCount == 5)
             {
-                spot.transform.DetachChildren();
+                foreach (Transform child in spot.transform)
+                {
+                    ThrowSquare(child.gameObject);
+                }
                 spot.GetComponent<SpriteRenderer>().color = leGreen;
             }
         }
