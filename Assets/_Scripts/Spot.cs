@@ -25,7 +25,7 @@ public class Spot : MonoBehaviour {
         cooldown -= Time.deltaTime;
 
 
-        if(gameObject.GetComponent<SpriteRenderer>().color == GameManager.Instance.leRed
+        if(gameObject.transform/*.GetChild(0)*/.GetComponent<SpriteRenderer>().color == GameManager.Instance.leRed
             && GameOverCheckSpot && !GameManager.Instance.GameOverBool && cooldown<0)
         {
             GameOverCheckSpot = false;

@@ -461,9 +461,13 @@ public class Square : MonoBehaviour
                 gameObject.transform.position = Vector3.MoveTowards(transform.position, squareTmpSquare.position, Speed * Time.deltaTime);
             else
             {
-                gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
-                gameObject.transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.wheel.transform.position, Speed * Time.deltaTime);
-                
+                if(gameObject.GetComponent<CapsuleCollider>() != null)
+                {
+                    gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
+                    gameObject.transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.wheel.transform.position, Speed * Time.deltaTime);
+
+                }
+
             }
 
         }
@@ -471,14 +475,16 @@ public class Square : MonoBehaviour
 
 
         // Boundary
-        if (Mathf.Abs(transform.position.y) > 100 || Mathf.Abs(transform.position.x) > 100)
+        if (Mathf.Abs(transform.position.y) > 100 || Mathf.Abs(transform.position.x) > 100|| Mathf.Abs(transform.position.x) > 100)
         {
             Destroy(gameObject);
         }
         //reached tmpSquare
         else if (squareTmpSquare != null && Mathf.Abs(transform.position.x - squareTmpSquare.position.x)<=0.01 && Mathf.Abs(transform.position.y - squareTmpSquare.position.y) <= 0.01)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            //Throw it away
+            GameManager.Instance.ThrowSquare(gameObject);
         }
 
 
@@ -810,6 +816,7 @@ public class Square : MonoBehaviour
 
             //Debug.Log("destroy this");
             Destroy(gameObject);
+            //GameManager.Instance.ThrowSquare(gameObject);
         }
 
 

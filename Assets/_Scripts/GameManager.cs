@@ -2101,7 +2101,9 @@ public class GameManager : Singleton<GameManager>
         }
 
         Instantiate(swoopPref, first.transform.position, Quaternion.identity);
-        Destroy(second);
+        ThrowSquare(second);
+
+        //Destroy(second);
         //if (first == null)
         //{
         //    //yield break;
@@ -2187,6 +2189,25 @@ public class GameManager : Singleton<GameManager>
 
 
 
+    //Throw Square away
+    public void ThrowSquare(GameObject target)
+    {
+        if(target != null)
+        {
+            Debug.Log("YAS");
+            target.transform.SetParent(null);
+            target.GetComponent<BoxCollider>().isTrigger = true;
+            target.transform.GetComponent<Square>().enabled = false;
+            target.tag = "Untagged";
+            target.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            target.GetComponent<Rigidbody>().useGravity = true;
+            target.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-200f,200f), 100f, -500f));
+            target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, 100f, 10f));
+
+        }
+       
+    }
+
 
     //Checkrow and pop coroutine
     public IEnumerator Turn()
@@ -2208,11 +2229,12 @@ public class GameManager : Singleton<GameManager>
                 foreach (GameObject chObject in turnCheckObjs)
                 {
                     //Check if object is still there
-                    if (chObject == null)
+                    if (chObject == null || chObject.CompareTag("Untagged"))
                         continue;
                     //if tmpObj destroyed - move on
-                    if (tmpObj == null)
+                    if (tmpObj == null || tmpObj.CompareTag("Untagged"))
                         break;
+
                     //check distance between (including passing through 0)
                     tmpDist = Mathf.Abs(int.Parse(tmpObj.transform.parent.name) - int.Parse(chObject.transform.parent.name));
                     if (Mathf.Abs(nBottom - tmpDist) <= tmpDist)
@@ -2234,7 +2256,7 @@ public class GameManager : Singleton<GameManager>
             }
 
             //if square reached 256 - ignore
-            if (tmpObj != null && tmpObj.GetComponent<Square>().Score >= 256)
+            if (!tmpObj.CompareTag("Untagged") && tmpObj != null && tmpObj.GetComponent<Square>().Score >= 256)
             {
                 //reset 
                 TurnInProgress = false;
@@ -2242,9 +2264,9 @@ public class GameManager : Singleton<GameManager>
             }
 
             //If doesnt pop with further and same score - check this one
-            if (tmpObj != null)
+            if (!tmpObj.CompareTag("Untagged") && tmpObj != null)
             {
-                if (!tmpObj.transform.parent.CompareTag("outer") && !tmpObj.GetComponent<Square>().IsMerging)
+                if (tmpObj.transform.parent != null && !tmpObj.transform.parent.CompareTag("outer") && !tmpObj.GetComponent<Square>().IsMerging)
                     CheckRow(int.Parse(tmpObj.transform.parent.name), tmpObj.transform.GetSiblingIndex(), tmpObj.GetComponent<Square>().Score, tmpObj);
 
             }
@@ -2780,7 +2802,7 @@ public class GameManager : Singleton<GameManager>
                 //temp for reference
                 GameObject tmprowObj = rowObj;
                 //Update the score
-                if (tmprowObj != null)
+                if (!tmprowObj.CompareTag("Untagged") && tmprowObj.transform.parent != null && tmprowObj != null)
                 {
 
 
@@ -2830,7 +2852,7 @@ public class GameManager : Singleton<GameManager>
         if (tmpSquare != null && tmpSquare.transform.GetSiblingIndex() > 1)
         {
             //if same score below
-            if (tmpSquare.transform.parent.GetChild(tmpSquare.transform.GetSiblingIndex() - 1).GetComponent<Square>().Score == tmpSquare.GetComponent<Square>().Score)
+            if (tmpSquare.transform.parent != null && tmpSquare.transform.parent.GetChild(tmpSquare.transform.GetSiblingIndex() - 1).GetComponent<Square>().Score == tmpSquare.GetComponent<Square>().Score)
             {
                 if (tmpSquare.GetComponent<Square>().IsMerging)
                 {
@@ -2859,14 +2881,16 @@ public class GameManager : Singleton<GameManager>
         //    checkObjs.Enqueue(tmpSquare);
 
 
-        if (tmpSquare != null && tmpSquare.GetComponent<Square>().Score != 256)
+        if (!tmpSquare.CompareTag("Untagged") && tmpSquare != null && tmpSquare.GetComponent<Square>().Score != 256)
         {
             tmpSquare.GetComponent<Square>().Further = true;
             //Debug.Log("FURTHER");
-            if (tmpSquare.transform.GetSiblingIndex() > 0)
+            if ( tmpSquare.transform.GetSiblingIndex() > 0)
             {
+                Debug.Log("RE? " + tmpSquare.name + " " +  tmpSquare.tag);
                 //if one below is same score - merge
-                if (!tmpSquare.transform.parent.CompareTag("outer") && tmpSquare.transform.parent.GetChild(tmpSquare.transform.GetSiblingIndex() - 1).GetComponent<Square>().Score == tmpSquare.GetComponent<Square>().Score)
+                if (tmpSquare.transform.parent != null && !tmpSquare.transform.parent.CompareTag("outer") && 
+                    tmpSquare.transform.parent.GetChild(tmpSquare.transform.GetSiblingIndex() - 1).GetComponent<Square>().Score == tmpSquare.GetComponent<Square>().Score)
                 {
 
                     Merge(tmpSquare, null, tmpSquare.transform.parent.GetChild(tmpSquare.transform.GetSiblingIndex() - 1).gameObject);
