@@ -2236,27 +2236,31 @@ public class GameManager : Singleton<GameManager>
                         break;
 
                     //check distance between (including passing through 0)
-                    tmpDist = Mathf.Abs(int.Parse(tmpObj.transform.parent.name) - int.Parse(chObject.transform.parent.name));
-                    if (Mathf.Abs(nBottom - tmpDist) <= tmpDist)
-                        tmpDist = Mathf.Abs(nBottom - tmpDist);
-
-                    //if chObject in list is furthering and same score -> this is tmpScore
-                    if (chObject.GetComponent<Square>().Score == tmpObj.GetComponent<Square>().Score)
+                    if(tmpObj != null && tmpObj.transform.parent != null && chObject != null && chObject.transform.parent != null)
                     {
-                        //If it's close enough and same score and nextobj is further and same index
-                        if (tmpDist <= 3 && tmpObj.GetComponent<Square>().Score == chObject.GetComponent<Square>().Score
-                        && chObject.GetComponent<Square>().Further /*&& tmpObj.GetComponent<Square>().RowObjIndex == chObject.GetComponent<Square>().RowObjIndex*/)
+                        tmpDist = Mathf.Abs(int.Parse(tmpObj.transform.parent.name) - int.Parse(chObject.transform.parent.name));
+                        if (Mathf.Abs(nBottom - tmpDist) <= tmpDist)
+                            tmpDist = Mathf.Abs(nBottom - tmpDist);
+
+                        //if chObject in list is furthering and same score -> this is tmpScore
+                        if (chObject.GetComponent<Square>().Score == tmpObj.GetComponent<Square>().Score)
                         {
-                            tmpObj = chObject;
-                            continue;
+                            //If it's close enough and same score and nextobj is further and same index
+                            if (tmpDist <= 3 && tmpObj.GetComponent<Square>().Score == chObject.GetComponent<Square>().Score
+                            && chObject.GetComponent<Square>().Further /*&& tmpObj.GetComponent<Square>().RowObjIndex == chObject.GetComponent<Square>().RowObjIndex*/)
+                            {
+                                tmpObj = chObject;
+                                continue;
+                            }
                         }
                     }
+                  
                 }
 
             }
 
             //if square reached 256 - ignore
-            if (!tmpObj.CompareTag("Untagged") && tmpObj != null && tmpObj.GetComponent<Square>().Score >= 256)
+            if (tmpObj != null && !tmpObj.CompareTag("Untagged") &&  tmpObj.GetComponent<Square>().isActiveAndEnabled == true && tmpObj.GetComponent<Square>().Score >= 256)
             {
                 //reset 
                 TurnInProgress = false;
@@ -2264,7 +2268,7 @@ public class GameManager : Singleton<GameManager>
             }
 
             //If doesnt pop with further and same score - check this one
-            if (!tmpObj.CompareTag("Untagged") && tmpObj != null)
+            if (tmpObj != null && !tmpObj.CompareTag("Untagged"))
             {
                 if (tmpObj.transform.parent != null && !tmpObj.transform.parent.CompareTag("outer") && !tmpObj.GetComponent<Square>().IsMerging)
                     CheckRow(int.Parse(tmpObj.transform.parent.name), tmpObj.transform.GetSiblingIndex(), tmpObj.GetComponent<Square>().Score, tmpObj);
@@ -2802,7 +2806,7 @@ public class GameManager : Singleton<GameManager>
                 //temp for reference
                 GameObject tmprowObj = rowObj;
                 //Update the score
-                if (!tmprowObj.CompareTag("Untagged") && tmprowObj.transform.parent != null && tmprowObj != null)
+                if (tmprowObj != null && !tmprowObj.CompareTag("Untagged") && tmprowObj.transform.parent != null)
                 {
 
 
@@ -2881,7 +2885,7 @@ public class GameManager : Singleton<GameManager>
         //    checkObjs.Enqueue(tmpSquare);
 
 
-        if (!tmpSquare.CompareTag("Untagged") && tmpSquare != null && tmpSquare.GetComponent<Square>().Score != 256)
+        if (tmpSquare != null && !tmpSquare.CompareTag("Untagged") && tmpSquare.GetComponent<Square>().isActiveAndEnabled == true && tmpSquare.GetComponent<Square>().Score!= 256)
         {
             tmpSquare.GetComponent<Square>().Further = true;
             //Debug.Log("FURTHER");
@@ -3412,8 +3416,11 @@ public class GameManager : Singleton<GameManager>
             {
                 foreach (Transform child in spot.transform)
                 {
+                    //child.GetComponent<Square>().enabled = false;
                     ThrowSquare(child.gameObject);
                 }
+
+               
                 spot.GetComponent<SpriteRenderer>().color = leGreen;
             }
         }

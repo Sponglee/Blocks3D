@@ -268,8 +268,11 @@ public class Square : MonoBehaviour
     {
         SquareText.text = SquareStyleHolder.Instance.SquareStyles[index].Number.ToString();
         SquareText.color = SquareStyleHolder.Instance.SquareStyles[index].TextColor;
-        if(SquareColor != null)
-            SquareColor.color = SquareStyleHolder.Instance.SquareStyles[index].SquareColor;
+        if (SquareColor != null)
+        {
+            //SquareColor.color = SquareStyleHolder.Instance.SquareStyles[index].SquareColor;
+            transform.GetChild(2).GetComponent<Renderer>().material.color = SquareStyleHolder.Instance.SquareStyles[index].SquareColor;
+        }
         //SquareText.GetComponent<Outline>().effectColor = SquareStyleHolder.Instance.SquareStyles[index].TextColor;
     }
     //Gets Values from style script for each square
