@@ -3225,7 +3225,7 @@ public class GameManager : Singleton<GameManager>
 
         //scoreText
         menu.transform.GetChild(0).GetChild(1).GetComponent<Text>().text = string.Format("{0}", scores);
-        menu.transform.GetChild(0).GetChild(4).GetComponent<Text>().text = string.Format("{0}\nHIGHSCORE", highscores);
+        menu.transform.GetChild(0).GetChild(4).GetComponent<Text>().text = string.Format("{0}\n", highscores);
 
         //upperText
         menu.transform.GetChild(0).GetChild(5).GetChild(0).GetComponent<Text>().text = string.Format("<color=white>{0}</color>", scoreUpper.ToString());
