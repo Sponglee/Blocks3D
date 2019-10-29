@@ -1856,7 +1856,7 @@ Transform:
   - {fileID: 456188126}
   - {fileID: 625502623}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -3.384, y: 0, z: 0.296}
 --- !u!1 &237402597
 GameObject:
@@ -3259,7 +3259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411294359
 GameObject:
@@ -6621,7 +6621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: -16.702002, y: -25.542002, z: -47.618004}
 --- !u!1 &790489624
 GameObject:
@@ -7606,7 +7606,7 @@ Transform:
   - {fileID: 796369821}
   - {fileID: 966880451}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859915296
 GameObject:
@@ -7703,7 +7703,7 @@ RectTransform:
   - {fileID: 1887904014}
   - {fileID: 1975859684}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9982,7 +9982,7 @@ RectTransform:
   - {fileID: 1185025741}
   - {fileID: 1700327763}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11528,7 +11528,7 @@ Transform:
   - {fileID: 611098958}
   - {fileID: 619613158}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1287057631
 BoxCollider:
@@ -12131,554 +12131,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350861554}
   m_CullTransparentMesh: 0
---- !u!1 &1381546253
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1381546255}
-  - component: {fileID: 1381546254}
-  m_Layer: 0
-  m_Name: ThemeStyleHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1381546254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381546253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 550ed800935d27c469d28cb42d787405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThemeStyles:
-  - shareButton:
-      m_NormalColor: {r: 0.7019608, g: 0.7019608, b: 0.7019608, a: 0}
-      m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-      m_PressedColor: {r: 0.75, g: 0.7475659, b: 0.72794116, a: 1}
-      m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-      m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 0.88349885, b: 0.5518868, a: 1}
-    wheelPref: {fileID: 1222991058251880, guid: 350cf70835279b54cb75924a3987584b,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: b6e8c6af2e6268d488c1b290800602b5,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1197368308167822, guid: 92cd19290242a8c48857441feb5196c4, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: 95b23eec89192724e8d83d052331a0bd,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 5a251d8d7c4a2ea43b86e1ee43d4692f,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4280887593
-    redPref:
-      serializedVersion: 2
-      rgba: 4278650761
-    fontPref: {fileID: 12800000, guid: 48c207787e1c3a143814e27fe8c7ffa5, type: 3}
-    uiPref: {fileID: 1757548442489750, guid: 9e16b151b0df754438f02b484df5cedf, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3828692277
-    linePref:
-      serializedVersion: 2
-      rgba: 2537636162
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 0.058823526, g: 0.21722686, b: 0.25, a: 0}
-      m_HighlightedColor: {r: 0.058823526, g: 0.21722686, b: 0.25, a: 1}
-      m_PressedColor: {r: 0, g: 0.5460953, b: 0.6544118, a: 1}
-      m_SelectedColor: {r: 0.058823526, g: 0.21722686, b: 0.25, a: 1}
-      m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 0.9545639, b: 0.58823526, a: 1}
-    wheelPref: {fileID: 1788055908502668, guid: 7c0ac1af7ef423d4283e1c44b4cfdcf0,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: 480496e6e746acb4ba9d30447e40635c,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1946421127701032, guid: 71368abb78691c045b4dbe9f9a9f30e2, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: a45335c98c69dcf45ac304fa3416ac4e,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 1326d41b98d6174408da59c1246fc897,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4280887593
-    redPref:
-      serializedVersion: 2
-      rgba: 4278650761
-    fontPref: {fileID: 12800000, guid: 48c207787e1c3a143814e27fe8c7ffa5, type: 3}
-    uiPref: {fileID: 1757548442489750, guid: edacce213e0f0cc4c9498844742e2242, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3140561153
-    linePref:
-      serializedVersion: 2
-      rgba: 833063680
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 0.29803923, g: 0.15294118, b: 0.11764706, a: 0}
-      m_HighlightedColor: {r: 0.41176468, g: 0.41176468, b: 0.41176468, a: 1}
-      m_PressedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-      m_SelectedColor: {r: 0.41176468, g: 0.41176468, b: 0.41176468, a: 1}
-      m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 0.9545639, b: 0.58823526, a: 1}
-    wheelPref: {fileID: 1788055908502668, guid: a3bde852669369b46b93c6056d5c6dca,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: 480496e6e746acb4ba9d30447e40635c,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1946421127701032, guid: 678c2700998923a49bc3cb0764941712, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: ec2c390561c1a4c48802d4091e734ac0,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 63ef13475e414854d8f0791f28f643ef,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4288082943
-    redPref:
-      serializedVersion: 2
-      rgba: 4283652351
-    fontPref: {fileID: 12800000, guid: 48c207787e1c3a143814e27fe8c7ffa5, type: 3}
-    uiPref: {fileID: 1865255154269606, guid: c6fae56a4cc37e54793f1da5409ce13f, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3357419340
-    linePref:
-      serializedVersion: 2
-      rgba: 1033303039
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 0.6901961, g: 0.3137255, b: 0.22352941, a: 0}
-      m_HighlightedColor: {r: 0.6901961, g: 0.3137255, b: 0.22352943, a: 1}
-      m_PressedColor: {r: 0.43137258, g: 0.19607845, b: 0.14117648, a: 1}
-      m_SelectedColor: {r: 0.6901961, g: 0.3137255, b: 0.22352943, a: 1}
-      m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 0.9545639, b: 0.58823526, a: 1}
-    wheelPref: {fileID: 1222991058251880, guid: 642d10ab01cbe5c4aab7d961d1b63bf5,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: dea564562afcd354292c337094b9b998,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 1b44d42245b3c684cbbcc11ca5969aca, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 81dc3b52cb44fff43bb8cddcd366b2ba, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 9ebab098a121c064781f97719e46cc06,
-      type: 3}
-    backPref: {fileID: 1197368308167822, guid: 153373d3a61ab7b43935e5e34e0e7ea6, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: 6ab8530ede4a56645aa03c572ee34454,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 6245639d65f9c2748a2b6ab250f3404d,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4288082943
-    redPref:
-      serializedVersion: 2
-      rgba: 4278650761
-    fontPref: {fileID: 12800000, guid: c62eb169bacbe4b4ca8d7a555f54f55b, type: 3}
-    uiPref: {fileID: 1757548442489750, guid: e3162d5a4fa7d1a489d69cf66fba3227, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 4096082028
-    linePref:
-      serializedVersion: 2
-      rgba: 1006632960
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 0.18823531, g: 0.9686275, b: 0, a: 0}
-      m_HighlightedColor: {r: 0.0627451, g: 0.8705883, b: 0.28627452, a: 1}
-      m_PressedColor: {r: 0.0627451, g: 0.8705883, b: 0.28627452, a: 1}
-      m_SelectedColor: {r: 0.0627451, g: 0.8705883, b: 0.28627452, a: 1}
-      m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 0.0627451, g: 0.8705883, b: 0.28627452, a: 1}
-    wheelPref: {fileID: 1222991058251880, guid: 25305ae3b516f524f91aa4b28216596b,
-      type: 3}
-    squarePref: {fileID: 1523403489220356, guid: ed21a2dedcc09cf4a98a179245881f26,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 8645f6f20e61001448092d8270576fa3, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: fa185bf6d407ad547bb9a38a2546ef39, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 238cfaaf14dc057499a4eb0ebbd0732f,
-      type: 3}
-    backPref: {fileID: 1197368308167822, guid: 76c26827c268c8041943081b847751cc, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: a8cee68e5672cc34e863590440289f90,
-      type: 3}
-    styleHolderPref: {fileID: 1000239900761858, guid: ac016516b0a337d4b99047520cb83ad8,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4278253360
-    redPref:
-      serializedVersion: 2
-      rgba: 4285929155
-    fontPref: {fileID: 12800000, guid: 335a6d1cc24f6a0419b8ef506975e68d, type: 3}
-    uiPref: {fileID: 1757548442489750, guid: 6971eb2ade4a5ab46ba58e8789be7be0, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3176242192
-    linePref:
-      serializedVersion: 2
-      rgba: 510113383
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 0}
-      m_HighlightedColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
-      m_PressedColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
-      m_SelectedColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
-      m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 1, b: 1, a: 1}
-    wheelPref: {fileID: 1222991058251880, guid: 135bf584c25b196438eba9a3c35ad5b7,
-      type: 3}
-    squarePref: {fileID: 1523403489220356, guid: ac91ab887f38b5b408bbf3612776d057,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 6621509479be559498e9743407846c59, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 8e6cfa662072f4041a35857aa6acd0ae, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: b725691d83de3cd469a24d67be0eea15,
-      type: 3}
-    backPref: {fileID: 1197368308167822, guid: 410f6f11f2bb11a46a65c7a483cdfbf0, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: c4fa3fad9d3dfd1439bbab13c5e2c5f1,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 2749efc02ffb1434f8187b0147ae1428,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4294967295
-    redPref:
-      serializedVersion: 2
-      rgba: 4278190275
-    fontPref: {fileID: 12800000, guid: 335a6d1cc24f6a0419b8ef506975e68d, type: 3}
-    uiPref: {fileID: 1757548442489750, guid: a79ed5600c1faf941ac1fbcc1c530475, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3179512707
-    linePref:
-      serializedVersion: 2
-      rgba: 3095297664
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4278190080
-  - shareButton:
-      m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
-      m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_PressedColor: {r: 0.8235294, g: 0.15743946, b: 0.15743946, a: 1}
-      m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 1, b: 1, a: 1}
-    wheelPref: {fileID: 1222991058251880, guid: fde0cc14c92e2ec4489a057a778d1627,
-      type: 3}
-    squarePref: {fileID: 1523403489220356, guid: 42f20f984f258c74ebc5d097897179bf,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: dc35572b7eea62046aff06c2ddd16c71, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 27c2c21288fcbe84ba3e6f39a802570e, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 32fdf991a1ba3314591b370f26c6a963,
-      type: 3}
-    backPref: {fileID: 1197368308167822, guid: 15fb57d368441d143a78541b439dc784, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: eae02cf92038b1e4b90a81affcd1d67a,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: f035e33897eba6f48b06f16e53a64208,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4278242303
-    redPref:
-      serializedVersion: 2
-      rgba: 4278190335
-    fontPref: {fileID: 12800000, guid: 335a6d1cc24f6a0419b8ef506975e68d, type: 3}
-    uiPref: {fileID: 1757548442489750, guid: 8af26834e957f4042b077c770d33e7f3, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3170894016
-    linePref:
-      serializedVersion: 2
-      rgba: 654364415
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
-      m_HighlightedColor: {r: 0.94117653, g: 0.93725497, b: 0.1254902, a: 1}
-      m_PressedColor: {r: 0.8235294, g: 0.15743946, b: 0.15743946, a: 1}
-      m_SelectedColor: {r: 0.94117653, g: 0.93725497, b: 0.1254902, a: 1}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 0.94117653, g: 0.93725497, b: 0.1254902, a: 1}
-    wheelPref: {fileID: 1889261379462078, guid: cff060df522072d43b1837d23735a05f,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: a76a2b55b52b57640b9749e69f7bbf6b,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: dc35572b7eea62046aff06c2ddd16c71, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 27c2c21288fcbe84ba3e6f39a802570e, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 32fdf991a1ba3314591b370f26c6a963,
-      type: 3}
-    backPref: {fileID: 1149206100099432, guid: 4ad17dbd0625f4341ac9d5d3f13533e0, type: 3}
-    fltTextPref: {fileID: 1074026440212994, guid: 6b4fd322447a2a74da28bcf99525e30e,
-      type: 3}
-    styleHolderPref: {fileID: 1076344931920994, guid: 95e7b64a04bb76146baa84ea35517d82,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4280348656
-    redPref:
-      serializedVersion: 2
-      rgba: 4281274584
-    fontPref: {fileID: 12800000, guid: 335a6d1cc24f6a0419b8ef506975e68d, type: 3}
-    uiPref: {fileID: 1051353532739338, guid: 271d683645c302c47b4b8297d28c82e9, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3174373416
-    linePref:
-      serializedVersion: 2
-      rgba: 790687728
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
-      m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_PressedColor: {r: 0.8235294, g: 0.15743946, b: 0.15743946, a: 1}
-      m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 0.9545639, b: 0.58823526, a: 1}
-    wheelPref: {fileID: 1528117760970024, guid: c6d8addd8fcf1ee4bbb15443bd471aa6,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: a76a2b55b52b57640b9749e69f7bbf6b,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1853300380787528, guid: d0642d2275c83c842a68364ffb421b63, type: 3}
-    fltTextPref: {fileID: 1261027608400062, guid: a1b5fca1cb381f646a226e763075d976,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 21ec65e8b26c7a549a9c4bd3b1165086,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4131744255
-    redPref:
-      serializedVersion: 2
-      rgba: 4278190335
-    fontPref: {fileID: 12800000, guid: c782dc6ed1ba47840972d0d813a873e8, type: 3}
-    uiPref: {fileID: 1547551712161638, guid: 81caa40d8fdabbe4995d4c338e33b0fa, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3179512707
-    linePref:
-      serializedVersion: 2
-      rgba: 1100411903
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
-      m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_PressedColor: {r: 0.8235294, g: 0.15743946, b: 0.15743946, a: 1}
-      m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 1, g: 1, b: 1, a: 1}
-    wheelPref: {fileID: 1528117760970024, guid: 742b7405de5e8c140a7713bf918b5489,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: a76a2b55b52b57640b9749e69f7bbf6b,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1853300380787528, guid: e14c4cdad0fa8f24e8de9e4d303c5682, type: 3}
-    fltTextPref: {fileID: 1261027608400062, guid: d8c92d7fbd3e7a74690ffa17f5507bb2,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: de48cf81bb97312428558a9036758f7b,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4138858751
-    redPref:
-      serializedVersion: 2
-      rgba: 4278190335
-    fontPref: {fileID: 12800000, guid: c782dc6ed1ba47840972d0d813a873e8, type: 3}
-    uiPref: {fileID: 1547551712161638, guid: e7a68dc479a697c48acd5691963bead5, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3178353004
-    linePref:
-      serializedVersion: 2
-      rgba: 1107296255
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4283914071
-  - shareButton:
-      m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
-      m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_PressedColor: {r: 0.8235294, g: 0.15743946, b: 0.15743946, a: 1}
-      m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 0, g: 0, b: 0, a: 1}
-    wheelPref: {fileID: 1381519888840642, guid: 636130742f38f614f9f94da4d70499d5,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: 480496e6e746acb4ba9d30447e40635c,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1853300380787528, guid: 764fcbe25469fe745aa7d19a8f4065fc, type: 3}
-    fltTextPref: {fileID: 1261027608400062, guid: 5265982fda70ad347bc3c91c14336072,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: 22a1ec2d45bc3794bb82c39e8aeaa6df,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4131477165
-    redPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    fontPref: {fileID: 12800000, guid: c782dc6ed1ba47840972d0d813a873e8, type: 3}
-    uiPref: {fileID: 1547551712161638, guid: e843126b6eea3da41966132826716390, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 3597561565
-    linePref:
-      serializedVersion: 2
-      rgba: 1107296255
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4294967295
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4285427421
-  - shareButton:
-      m_NormalColor: {r: 1, g: 0, b: 0, a: 0}
-      m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_PressedColor: {r: 0.8235294, g: 0.15743946, b: 0.15743946, a: 1}
-      m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
-      m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
-      m_ColorMultiplier: 1
-      m_FadeDuration: 0.1
-    shareButtonText: {r: 0, g: 0.6320754, b: 0.36553586, a: 1}
-    wheelPref: {fileID: 1142840695381132, guid: 4c42d74d805e93d47853e8553cb5ab4f,
-      type: 3}
-    squarePref: {fileID: 1379266986706278, guid: 480496e6e746acb4ba9d30447e40635c,
-      type: 3}
-    spotPref: {fileID: 1679439421920422, guid: 055f7c54f7ecbe148b7a8b0d4b93abd8, type: 3}
-    gridPref: {fileID: 1679439421920422, guid: 784c28be4a463e74cb0a5b33be5b04c1, type: 3}
-    spawnPref: {fileID: 1679439421920422, guid: 6afc8b51008248347a5323e7f8f57790,
-      type: 3}
-    backPref: {fileID: 1486783806639068, guid: bd1eee7ca9b42fc41a59292e405eef23, type: 3}
-    fltTextPref: {fileID: 1001251165192770, guid: 4e6329d286222ba498b5b6abd17ac8be,
-      type: 3}
-    styleHolderPref: {fileID: 1192564838605412, guid: efe36825ca94b2b429119945ffbc23f7,
-      type: 3}
-    yellowPref:
-      serializedVersion: 2
-      rgba: 4282355198
-    redPref:
-      serializedVersion: 2
-      rgba: 4278190335
-    fontPref: {fileID: 12800000, guid: c782dc6ed1ba47840972d0d813a873e8, type: 3}
-    uiPref: {fileID: 1283229927817490, guid: 547836e493f7fd544a8cf034503a1aee, type: 3}
-    menuPref:
-      serializedVersion: 2
-      rgba: 2566914224
-    linePref:
-      serializedVersion: 2
-      rgba: 1107296255
-    sliderTextPref:
-      serializedVersion: 2
-      rgba: 4278190080
-    sliderBackPref:
-      serializedVersion: 2
-      rgba: 4282285347
---- !u!4 &1381546255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381546253}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55084574, y: -7.530452, z: -0.24270107}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1382697070
 GameObject:
   m_ObjectHideFlags: 0
@@ -14109,7 +13561,7 @@ RectTransform:
   - {fileID: 1493068752}
   - {fileID: 1919618640}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15173,7 +14625,7 @@ RectTransform:
   m_Children:
   - {fileID: 2146886496}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15470,7 +14922,7 @@ RectTransform:
   - {fileID: 393002030}
   - {fileID: 855716193}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15663,7 +15115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613242199
 GameObject:
@@ -16393,7 +15845,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639938914
 GameObject:
@@ -16684,7 +16136,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693254341
 GameObject:
@@ -19548,7 +19000,7 @@ Transform:
   - {fileID: 158005539}
   - {fileID: 206102653}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -3.384, y: -4.145, z: 0.296}
 --- !u!1 &1875681000
 GameObject:
@@ -19596,7 +19048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1875681003
 BoxCollider:
@@ -21087,7 +20539,7 @@ Transform:
   m_LocalScale: {x: 1.8644944, y: 1.8644944, z: 1.8644944}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!331 &2044326781
 SpriteMask:

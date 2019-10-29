@@ -45,21 +45,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leaderButtons:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   highscoreTexts:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   errorText: {fileID: 0}
   privateCodes:
-  - WPjeF8InbkC3J9WcwxfCrgZxIXdxg64U2HaeobCmHWpQ
-  - eb92o3NsiEaefcadIq-J0ALM7j6zvUTE2Y2Z6jTI-Yeg
   - AcuAaD1dAUyFC3E1dKLsigcvWqyW3ZQkqfG3vkuuCG3A
+  - eb92o3NsiEaefcadIq-J0ALM7j6zvUTE2Y2Z6jTI-Yeg
+  - WPjeF8InbkC3J9WcwxfCrgZxIXdxg64U2HaeobCmHWpQ
   publicCodes:
-  - 5bb78544613a87132ca9aee6
-  - 5bbe6985613a87132ccbe948
   - 5bbe6a25613a87132ccbeb05
+  - 5bbe6985613a87132ccbe948
+  - 5bb78544613a87132ca9aee6
   privateCode: 
   publicCode: 
   scoreElementPref: {fileID: 1589008618519690, guid: 3524cd957f1e98048ba2dca9c42ddb42,

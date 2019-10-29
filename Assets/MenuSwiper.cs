@@ -76,26 +76,26 @@ public class MenuSwiper : MonoBehaviour {
         }
 
 
-        //Cycle through tables
-        if (IsSwiping(MenuSwipeDirection.Left) && FunctionHandler.Instance.leaderBoardOpen)
-        {
-            currentTable += 1;
-            if (currentTable > 2)
-                currentTable = 0;
-            //funcHandler.PickTable(currentTable);
-            buttons[currentTable].onClick.Invoke();
-            StartCoroutine(StopLeader());
-        }
-        //roll to the left
-        else if (IsSwiping(MenuSwipeDirection.Right) && FunctionHandler.Instance.leaderBoardOpen)
-        {
-            currentTable -= 1;
-            if (currentTable < 0)
-                currentTable = 2;
-            //funcHandler.PickTable(currentTable);
-            buttons[currentTable].onClick.Invoke();
-            StartCoroutine(StopLeader(true));
-        }
+        ////Cycle through tables
+        //if (IsSwiping(MenuSwipeDirection.Left) && FunctionHandler.Instance.leaderBoardOpen)
+        //{
+        //    currentTable += 1;
+        //    if (currentTable > 2)
+        //        currentTable = 0;
+        //    //funcHandler.PickTable(currentTable);
+        //    buttons[currentTable].onClick.Invoke();
+        //    StartCoroutine(StopLeader());
+        //}
+        ////roll to the left
+        //else if (IsSwiping(MenuSwipeDirection.Right) && FunctionHandler.Instance.leaderBoardOpen)
+        //{
+        //    currentTable -= 1;
+        //    if (currentTable < 0)
+        //        currentTable = 2;
+        //    //funcHandler.PickTable(currentTable);
+        //    buttons[currentTable].onClick.Invoke();
+        //    StartCoroutine(StopLeader(true));
+        //}
     }
 
     //reference for menu container

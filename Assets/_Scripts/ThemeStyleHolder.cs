@@ -11,6 +11,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class ThemeStyle
 {
+    public string Name;
     public ColorBlock shareButton;
     public Color shareButtonText;
 
@@ -41,10 +42,19 @@ public class ThemeStyle
 public class ThemeStyleHolder : Singleton<ThemeStyleHolder> {
 
 
-
+    
     public  ThemeStyle[] ThemeStyles;
 
 
 
+    private void Start()
+    {
+        //persistant coin manager
+        DontDestroyOnLoad(gameObject);
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
 
+    }
 }
