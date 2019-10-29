@@ -1,6 +1,6 @@
-﻿//using UnityEngine.Advertisements;
-using UnityEngine;
+﻿using UnityEngine;
 
+using UnityEngine.Advertisements;
 using UnityEngine.UI;
 
 public class CoinManager : Singleton<CoinManager> {
@@ -65,7 +65,7 @@ public class CoinManager : Singleton<CoinManager> {
 
 
         //Initialize the ad and skins
-        //Advertisement.Initialize("3af5ea4b-4854-464f-b6cd-6286807539a8");
+        Advertisement.Initialize("3af5ea4b-4854-464f-b6cd-6286807539a8");
         //For editor usage, pls ignore
         fadeCanvas.SetActive(true);
         
@@ -90,11 +90,11 @@ public class CoinManager : Singleton<CoinManager> {
     //Open up an ad
     public void ShowAd()
     {
-        //if (Advertisement.IsReady())
-        //{
-        //    Advertisement.Show("rewardedVideo", new ShowOptions() { resultCallback = HandleAdResult });
-        //    Time.timeScale = 0;
-        //}
+        if (Advertisement.IsReady())
+        {
+            Advertisement.Show("rewardedVideo", new ShowOptions() { resultCallback = HandleAdResult });
+            Time.timeScale = 0;
+        }
 
 
         //DEBUG WATCH AD
@@ -103,81 +103,81 @@ public class CoinManager : Singleton<CoinManager> {
 
     public void MenuAd()
     {
-        //if (Advertisement.IsReady())
-        //{
-        //    if (GameManager.Instance != null)
-        //        GameManager.Instance.AdInProgress = true;
-        //    Advertisement.Show("video", new ShowOptions() { resultCallback = HandleAdResultMenu });
-        //    Time.timeScale = 0;
-        //}
+        if (Advertisement.IsReady())
+        {
+            if (GameManager.Instance != null)
+                GameManager.Instance.AdInProgress = true;
+            Advertisement.Show("video", new ShowOptions() { resultCallback = HandleAdResultMenu });
+            Time.timeScale = 0;
+        }
 
         //DEBUG WATCH AD
-        //CoinManager.Instance.Coins += fullAdWatch;
+        CoinManager.Instance.Coins += fullAdWatch;
     }
 
-    ////Recieve result from watching
-    //private void HandleAdResult(ShowResult result)
-    //{
+    //Recieve result from watching
+    private void HandleAdResult(ShowResult result)
+    {
 
-    //    switch (result)
-    //    {
-    //        case ShowResult.Finished:
-    //            {
-    //                CoinManager.Instance.Coins += fullAdWatch;
-    //                Time.timeScale = 1;
+        switch (result)
+        {
+            case ShowResult.Finished:
+                {
+                    CoinManager.Instance.Coins += fullAdWatch;
+                    Time.timeScale = 1;
 
-    //                break;
-    //            }
-    //        case ShowResult.Skipped:
-    //            {
-    //                CoinManager.Instance.Coins += partAdWatch;
-    //                Time.timeScale = 1;
+                    break;
+                }
+            case ShowResult.Skipped:
+                {
+                    CoinManager.Instance.Coins += partAdWatch;
+                    Time.timeScale = 1;
 
-    //                break;
-    //            }
-    //        case ShowResult.Failed:
-    //            {
-    //                Time.timeScale = 1;
-    //                Debug.Log("Failed");
+                    break;
+                }
+            case ShowResult.Failed:
+                {
+                    Time.timeScale = 1;
+                    Debug.Log("Failed");
 
-    //                break;
+                    break;
 
-    //            }
+                }
 
-    //    }
+        }
 
-    //}
+    }
 
-    ////Recieve result from watching
-    //private void HandleAdResultMenu(ShowResult result)
-    //{
+    //Recieve result from watching
+    private void HandleAdResultMenu(ShowResult result)
+    {
 
-    //    switch (result)
-    //    {
-    //        case ShowResult.Finished:
-    //            {
+        switch (result)
+        {
+            case ShowResult.Finished:
+                {
 
-    //                Time.timeScale = 1;
+                    Time.timeScale = 1;
 
-    //                break;
-    //            }
-    //        case ShowResult.Skipped:
-    //            {
-    //                //CoinManager.Instance.Coins += partAdWatch;
-    //                Time.timeScale = 1;
+                    break;
+                }
+            case ShowResult.Skipped:
+                {
+                    //CoinManager.Instance.Coins += partAdWatch;
+                    Time.timeScale = 1;
 
-    //                break;
-    //            }
-    //        case ShowResult.Failed:
-    //            {
-    //                Time.timeScale = 1;
-    //                Debug.Log("Failed");
+                    break;
+                }
+            case ShowResult.Failed:
+                {
+                    Time.timeScale = 1;
+                    Debug.Log("Failed");
 
-    //                break;
+                    break;
 
-    //            }
+                }
 
-    //    }
+        }
 
-    //}
+    }
 }

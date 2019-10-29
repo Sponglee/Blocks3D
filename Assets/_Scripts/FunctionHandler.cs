@@ -282,20 +282,20 @@ public void ChangeThemeHandler(GameObject index=null,int indNumber=-1)
     //RETURN TO MAIN MOVE FUNCTIONS
     public void BackFromShop(GameObject localMenu)
     {
-        StartCoroutine(StopMenu(2500, localMenu, 1));
+        StartCoroutine(StopMenu(5500, localMenu, 1));
 
     }
 
     public void BackFromLocal(GameObject localMenu)
     {
-        StartCoroutine(StopMenu(2500, localMenu, 0));
+        StartCoroutine(StopMenu(5500, localMenu, 0));
 
     }
 
     public void BackFromBoard(GameObject localMenu)
     {
         leaderBoardOpen = false;
-        StartCoroutine(StopMenu(-2500, localMenu, 2));
+        StartCoroutine(StopMenu(-5500, localMenu, 2));
 
     }
 
