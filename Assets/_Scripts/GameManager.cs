@@ -91,7 +91,35 @@ public class GameManager : Singleton<GameManager>
 
 
     //prefab for controlling movement while falling
-    GameObject squareSpawn = null;
+    [SerializeField]
+    private GameObject squareSpawn = null;
+    public GameObject SquareSpawn
+    {
+        get
+        {
+            return squareSpawn;
+        }
+
+        set
+        {
+            ////If there was a clickSpawn and it become null
+            //if (squareSpawn != null && value == null)
+            //{
+            //    Debug.Log("VENT NULL OB SPOT");
+            //    squareSpawn = value;
+            //    ClickSpawn();
+            //}
+            //else
+                squareSpawn = value;
+        }
+
+    }
+
+
+
+
+
+
     //for random expand spawns
     GameObject randSpawn = null;
 
@@ -165,6 +193,8 @@ public class GameManager : Singleton<GameManager>
             moves = value;
         }
     }
+
+   
 
     // for TIME EXPAND
     public float fMoves = 0f;
@@ -819,7 +849,8 @@ public class GameManager : Singleton<GameManager>
 
 
 
-
+        ////Click Spawn square
+        //ClickSpawn();
 
 
 
@@ -1057,8 +1088,8 @@ public class GameManager : Singleton<GameManager>
             if (results.Count > 0)
             {
                 //Get rid of selected square
-                SelectHammer = false;
                 Instantiate(hammerPref, results[0].gameObject.transform.position, Quaternion.identity);
+                SelectHammer = false;
 
 
                 ////********************TUTORIAL*********HAMMER(SELECT)
@@ -1142,6 +1173,12 @@ public class GameManager : Singleton<GameManager>
             {
                 AudioManager.Instance.PlaySound("stop");
             }
+
+
+            //Show Ad
+            CoinManager.Instance.MenuAd();
+
+
 
         }
         //Use **BOMB
@@ -1523,8 +1560,11 @@ public class GameManager : Singleton<GameManager>
 
 
 
+                    //88888
+                    ClickSpawnOld();
 
-                    ClickSpawn();
+                    //DropSpawn();
+
                     cantSpawn = true;
 
 
@@ -1738,11 +1778,8 @@ public class GameManager : Singleton<GameManager>
 
 
 
-
-
-
     //Spawn new square
-    public void ClickSpawn(Transform spawnPosition = null)
+    public void ClickSpawnOld(Transform spawnPosition = null)
     {
 
         //********************TUTORIAL*********CLICKSPAWN
@@ -1767,77 +1804,8 @@ public class GameManager : Singleton<GameManager>
         //Debug.Log(squareSpawn.GetComponent<Square>().IsSpawn);
         squareSpawn.GetComponent<Square>().Score = next_score;
 
-
-        ////****************************TUTORIAL**************************************************
-        //if (PlayerPrefs.GetInt("TutorialStep", 0) < 2)
-        //{
-        //    int tutStep = PlayerPrefs.GetInt("TutorialStep", 0);
-
-        //    switch (tutStep)
-        //    {
-        //        //For Tap
-        //        case 0:
-        //            {
-        //                tutNum = 2;
-
-        //                break;
-        //            }
-        //        //for Rotate
-
-        //        case 1:
-        //            {
-
-        //                tutNum = 2;
-        //                break;
-        //            }
-        //        //for Merge
-
-        //        case 2:
-        //            {
-        //                tutNum = 4;
-
-        //                break;
-        //            }
-        //        //for Hammer
-
-        //        case 3:
-        //            {
-        //                tutNum = 4;
-
-        //                break;
-        //            }
-        //        //for Bomb
-
-        //        case 4:
-        //            {
-
-        //                tutNum = 2;
-        //                break;
-        //            }
-        //        //For Drill
-
-        //        case 5:
-        //            {
-
-        //                tutNum = 2;
-        //                break;
-        //            }
-
-
-
-        //        default:
-        //            tutNum = 2;
-        //            break;
-        //    }
-
-        //    next_score = tutNum;
-        //    nextScore.text = next_score.ToString();
-
-        //}
-        ////**************************************************************************
-        //else
-            //get score for next turn (non-inclusive)
-            next_score = (int)Mathf.Pow(2, Random.Range(1, maxScore + 1));
+        //get score for next turn (non-inclusive)
+        next_score = (int)Mathf.Pow(2, Random.Range(1, maxScore + 1));
 
 
 
@@ -1849,7 +1817,58 @@ public class GameManager : Singleton<GameManager>
     }
 
 
+    ////Spawn new square
+    //public void ClickSpawn(Transform spawnPosition = null)
+    //{
+    //    //********************TUTORIAL*********CLICKSPAWN
+    //    if (tutorialManager.tutorialStep == 0)
+    //    {
+    //        tutorialManager.tutorialTrigger.Invoke();
+    //    }
+    //    //*****************************
+
+
+
+
+    //    //squareSpawn.GetComponent<Rigidbody2D>().
+    //    //spawn a square
+    //    if (spawnPosition != null)
+    //        SquareSpawn = Instantiate(squarePrefab, spawnPosition.position, Quaternion.identity);
+    //    else
+    //        SquareSpawn = Instantiate(squarePrefab, currentSpawn.transform.position, Quaternion.identity);
+
+    //    Debug.Log("CLECK SPAWN");
+
+    //    SquareSpawn.GetComponent<Square>().IsSpawn = true;
+
+    //    //Debug.Log(squareSpawn.GetComponent<Square>().IsSpawn);
+    //    SquareSpawn.GetComponent<Square>().Score = next_score;
+        
+    //    //get score for next turn (non-inclusive)
+    //    next_score = (int)Mathf.Pow(2, Random.Range(1, maxScore + 1));
+
+
+
+    //    nextScore.text = next_score.ToString();
+    //    ApplyStyle(next_score);
+
+
+
+    //}
+
+
+    ////Drop the spawn
+    //public void DropSpawn()
+    //{
+    //    SquareSpawn.GetComponent<Square>().IsDropped = true;
+    //    SquareSpawn.transform.SetParent(GameManager.Instance.currentSpot.transform);
+    //    SquareSpawn.name = gameObject.transform.GetSiblingIndex().ToString();
+    //}
+
+
     //Build circle for spots
+
+
     public Vector3 RandomCircle(Vector3 center, float radius, int a)
     {
         //Debug.Log(a);
@@ -2201,8 +2220,46 @@ public class GameManager : Singleton<GameManager>
             target.tag = "Untagged";
             target.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             target.GetComponent<Rigidbody>().useGravity = true;
-            target.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-150f,150f), 100f, -400f));
-            target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, 100f, 10f));
+
+
+            int randomForce = Random.Range(0, 4);
+            switch (randomForce)
+            {
+                case 0:
+                    {
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, 100f, -400f));
+                        target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, -100f, 20f));
+                        break;
+                    }
+                case 1:
+                    {
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, -100f, -400f));
+                        target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, -100f, 20f));
+                        break;
+                    }
+                case 2:
+                    {
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, 100f, -400f));
+                        target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, 100f, 20f));
+                        break;
+                    }
+                case 3:
+                    {
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, -100f, -400f));
+                        target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, 100f, 20f));
+                        break;
+                    }
+                case 4:
+                    {
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, 100f, -400f));
+                        target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, -100f, 20f));
+                        break;
+                    }
+                default:
+                    break;
+            }
+
+          
 
         }
        

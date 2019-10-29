@@ -147,7 +147,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4afe8cc278e064937a78448f852e49b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2202b8aabbff476ab5e2468ee3b72ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -251,6 +251,7 @@ MonoBehaviour:
   SquareText: {fileID: 114173372458682466}
   SquareColor: {fileID: 212937402952094178}
   mergeCheck: 0
+  isDropped: 0
 --- !u!65 &5311365774362136449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -262,7 +263,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.77, y: 0.97, z: 1}
+  m_Size: {x: 0.77, y: 1.1, z: 1}
   m_Center: {x: -0.00000023841858, y: 0, z: 0}
 --- !u!54 &8981330512038466128
 Rigidbody:
@@ -307,7 +308,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568511712368270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.61}
   m_LocalScale: {x: 1.038095, y: 1.038095, z: 1}
   m_Children:
   - {fileID: 224563687659590692}

@@ -29,7 +29,7 @@ public class PowerUp : MonoBehaviour
 
                 foreach (var tmp in tmpSquarePwrUps)
                 {
-                    if (tmp.transform.parent.CompareTag("spot"))
+                    if (tmp.transform.parent != null && tmp.transform.parent.CompareTag("spot"))
                         tmp.transform.GetChild(1).gameObject.SetActive(true);
                 }
             }
@@ -38,7 +38,7 @@ public class PowerUp : MonoBehaviour
                 //count cost of selectSquare
                 if(GameManager.Instance.SquareDestroyed)
                 {
-                    CoinManager.Instance.Coins -= pCost;
+                    //CoinManager.Instance.Coins -= pCost;
                     GameManager.Instance.SquareDestroyed = false;
                 }
                 gameObject.GetComponent<Image>().color = new Color32(255,255,255,246);
@@ -140,7 +140,7 @@ public class PowerUp : MonoBehaviour
         int index = gameObject.transform.GetSiblingIndex();
         if(!GameManager.Instance.gameOverInProgress && !GameManager.Instance.GameOverBool)
         {
-            if (CoinManager.Instance.Coins >= pCost)
+            if (true || CoinManager.Instance.Coins >= pCost)
             {
 
 

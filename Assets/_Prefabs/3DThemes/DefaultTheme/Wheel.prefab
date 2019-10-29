@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0.8039216}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1211,6 +1211,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5535334
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 29e3ca8a9724a754996623051590304a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a4f1b47e459cf249820e0aa89b0504a, type: 2}
     m_RemovedComponents:
     - {fileID: -6057140222963153312, guid: 29e3ca8a9724a754996623051590304a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29e3ca8a9724a754996623051590304a, type: 3}
@@ -1302,6 +1307,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.526676
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 29e3ca8a9724a754996623051590304a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a4f1b47e459cf249820e0aa89b0504a, type: 2}
     m_RemovedComponents:
     - {fileID: -6057140222963153312, guid: 29e3ca8a9724a754996623051590304a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29e3ca8a9724a754996623051590304a, type: 3}

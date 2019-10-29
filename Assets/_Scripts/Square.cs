@@ -254,7 +254,22 @@ public class Square : MonoBehaviour
         }
     }
 
-    
+
+    [SerializeField]
+    private bool isDropped = false;
+    public bool IsDropped
+    {
+        get
+        {
+            return isDropped;
+        }
+
+        set
+        {
+            isDropped = value;
+        }
+    }
+ 
 
     Vector3 curPos;
     Vector3 lastPos;
@@ -342,8 +357,12 @@ public class Square : MonoBehaviour
             //gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
             gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = score.ToString();
 
+
             gameObject.transform.SetParent(GameManager.Instance.currentSpot.transform);
             gameObject.name = gameObject.transform.GetSiblingIndex().ToString();
+
+
+
             ApplyStyle(this.score);
         }
 
@@ -373,7 +392,7 @@ public class Square : MonoBehaviour
         if (gameObject.CompareTag("square"))
         {
             curPos = gameObject.transform.localPosition;
-            if (curPos == lastPos && gameObject.transform.parent != null)
+            if (curPos == lastPos && gameObject.transform.parent != null || this.IsSpawn)
             {
                 //IsMoving = false;
                 GameManager.Instance.SomethingIsMoving = false;
@@ -393,7 +412,7 @@ public class Square : MonoBehaviour
         }
 
         //Move through grid
-        if (!this.IsTop && this.gameObject.transform.parent != null && !this.gameObject.transform.parent.CompareTag("outer"))
+        if (/*(IsSpawn && IsDropped) || */(!this.IsTop && this.gameObject.transform.parent != null && !this.gameObject.transform.parent.CompareTag("outer")))
         {
 
             //Move to needed grid spot
@@ -477,13 +496,14 @@ public class Square : MonoBehaviour
 
 
 
-        // Boundary
-        if (Mathf.Abs(transform.position.y) > 100 || Mathf.Abs(transform.position.x) > 100|| Mathf.Abs(transform.position.x) > 100)
-        {
-            Destroy(gameObject);
-        }
-        //reached tmpSquare
-        else if (squareTmpSquare != null && Mathf.Abs(transform.position.x - squareTmpSquare.position.x)<=0.01 && Mathf.Abs(transform.position.y - squareTmpSquare.position.y) <= 0.01)
+        //// Boundary
+        //if (Mathf.Abs(transform.position.y) > 100 || Mathf.Abs(transform.position.x) > 100|| Mathf.Abs(transform.position.x) > 100)
+        //{
+        //    Destroy(gameObject);
+        //}
+        ////reached tmpSquare
+        //else 
+        if (squareTmpSquare != null && Mathf.Abs(transform.position.x - squareTmpSquare.position.x)<=0.01 && Mathf.Abs(transform.position.y - squareTmpSquare.position.y) <= 0.01)
         {
             //Destroy(gameObject);
             //Throw it away
@@ -641,7 +661,6 @@ public class Square : MonoBehaviour
         #region Powerup interaction
 
 
-
         if (other.gameObject.CompareTag("square") && this.gameObject.CompareTag("drill"))
         {
             GameManager.Instance.Merge(gameObject, null, other.gameObject,true);
@@ -675,6 +694,14 @@ public class Square : MonoBehaviour
 
         if (other.gameObject.CompareTag("spot") && this.gameObject.CompareTag("square"))
         {
+
+
+            //if (IsSpawn)
+            //{
+            //    //Spawn Next one
+            //    GameManager.Instance.SquareSpawn = null;
+            //}
+
             Debug.Log(gameObject.transform.parent.name + "( " + gameObject.name + ") : " + score);
             //reset speed back
             this.speed = 10f;
@@ -705,13 +732,25 @@ public class Square : MonoBehaviour
                 AudioManager.Instance.PlaySound("bump");
             }
 
+           
+           
+           
 
 
         }
 
-        //other square
-        if (other.gameObject.CompareTag("square") && gameObject.CompareTag("square") && !this.touched /*&& gameObject.transform.GetSiblingIndex() > other.gameObject.transform.GetSiblingIndex()*/)
+        //other square сheck if collided once and is higher than other one
+        if (other.gameObject.CompareTag("square") && gameObject.CompareTag("square") && !this.touched 
+                && gameObject.transform.GetSiblingIndex() > other.gameObject.transform.GetSiblingIndex())
         {
+
+            //if (IsSpawn)
+            //{
+            //    //Spawn Next one
+            //    GameManager.Instance.SquareSpawn = null;
+            //}
+
+
             Debug.Log(transform.parent.name + " (" + gameObject.name + ")" + " >>>> COLLIDED " + other.transform.parent.name + " ( " + other.gameObject.name + ") : " + score);
             //Debug.Log("REEE");
             //make sure checks only one of 2 collisions (one that is not touched
@@ -765,6 +804,10 @@ public class Square : MonoBehaviour
                 }
 
 
+               
+
+
+
                 //reset Touched bool 
                 StartCoroutine(StopTouch(other.gameObject));
 
@@ -776,6 +819,8 @@ public class Square : MonoBehaviour
 
             }
             gameObject.name = gameObject.transform.GetSiblingIndex().ToString();
+
+          
 
         }
 
