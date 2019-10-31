@@ -2233,7 +2233,7 @@ public class GameManager : Singleton<GameManager>
                     }
                 case 1:
                     {
-                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, -100f, -400f));
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, 100f, -400f));
                         target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, -100f, 20f));
                         break;
                     }
@@ -2245,7 +2245,7 @@ public class GameManager : Singleton<GameManager>
                     }
                 case 3:
                     {
-                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, -100f, -400f));
+                        target.GetComponent<Rigidbody>().AddForce(new Vector3(150f, 100f, -400f));
                         target.GetComponent<Rigidbody>().AddTorque(new Vector3(10f, 100f, 20f));
                         break;
                     }
