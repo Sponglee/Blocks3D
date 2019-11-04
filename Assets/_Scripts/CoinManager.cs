@@ -101,14 +101,23 @@ public class CoinManager : Singleton<CoinManager> {
         //CoinManager.Instance.Coins += fullAdWatch;
     }
 
-    public void MenuAd()
+    public void MenuAd(bool powerUp = false)
     {
         if (Advertisement.IsReady())
         {
-            if (GameManager.Instance != null)
-                GameManager.Instance.AdInProgress = true;
-            Advertisement.Show("video", new ShowOptions() { resultCallback = HandleAdResultMenu });
-            Time.timeScale = 0;
+            //For bomb 
+            if(powerUp)
+            {
+
+            }
+            else
+            {
+                if (GameManager.Instance != null)
+                    GameManager.Instance.AdInProgress = true;
+                Advertisement.Show("video", new ShowOptions() { resultCallback = HandleAdResultMenu });
+                Time.timeScale = 0;
+            }
+          
         }
 
         //DEBUG WATCH AD
